@@ -1,4 +1,4 @@
-name: new_LSD
+name: temp
 channels:
   - pytorch
   - conda-forge
