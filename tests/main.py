@@ -5,6 +5,8 @@ import dowel_wrapper
 assert dowel_wrapper is not None
 import dowel
 
+import wandb
+
 import argparse
 import datetime
 import functools
@@ -328,6 +330,10 @@ def create_policy(*, name, env_spec, hidden_sizes, hidden_nonlinearity=None, omi
 
 @wrap_experiment(log_dir=get_log_dir(), name=get_exp_name()[0])
 def main(ctxt=None):
+    if 'WANDB_API_KEY' in os.environ:
+        wandb.init(project='lsd', group=args.run_group, name=get_exp_name()[0],
+                    config=vars(args))
+    
     dowel.logger.log('ARGS: ' + str(args))
     if args.n_thread is not None:
         torch.set_num_threads(args.n_thread)

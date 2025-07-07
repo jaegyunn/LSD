@@ -10,6 +10,8 @@ distributions. We add this feature by sampling data from a
 """
 import functools
 import warnings
+import os
+import wandb
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -63,6 +65,10 @@ class TensorBoardOutput(LogOutput):
         self._waiting_for_dump = []
         # Used in tests to emulate Tensorflow not being installed.
         self._tf = tf
+        if 'WANDB_API_KEY' in os.environ:
+            self.wandb = True
+        else:
+            self.wandb = False
 
         self._warned_once = set()
         self._disable_warnings = False
@@ -122,10 +128,16 @@ class TensorBoardOutput(LogOutput):
             self._writer.add_text(key, value, step)
         elif isinstance(value, np.ScalarType):
             self._writer.add_scalar(key, value, step)
+            if self.wandb:
+                wandb.log({key: value}, step=step)
         elif isinstance(value, plt.Figure):
             self._writer.add_figure(key, value, step)
+            if self.wandb:
+                wandb.log({key: wandb.Image(value)}, step=step)
         elif isinstance(value, np.ndarray) and value.ndim == 5:
             self._writer.add_video(key, value, step, fps=15)
+            if self.wandb:
+                wandb.log({key: wandb.Video(value)}, step=step)
         elif isinstance(value, scipy.stats._distn_infrastructure.rv_frozen):
             shape = (self._histogram_samples, ) + value.mean().shape
             self._writer.add_histogram(key, value.rvs(shape), step)
@@ -157,6 +169,8 @@ class TensorBoardOutput(LogOutput):
     def close(self):
         """Flush all the events to disk and close the file."""
         self._writer.close()
+        if self.wandb:
+            wandb.finish()
 
     def _warn(self, msg):
         """Warns the user using warnings.warn.

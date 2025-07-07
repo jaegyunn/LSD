@@ -1,0 +1,247 @@
+wandb_version: 1
+
+run_group:
+  desc: null
+  value: EXP
+normalizer_type:
+  desc: null
+  value: ant_preset
+normalizer_obs_alpha:
+  desc: null
+  value: 0.001
+normalized_env_eval_update:
+  desc: null
+  value: 0
+normalizer_mean:
+  desc: null
+  value: 0
+normalizer_std:
+  desc: null
+  value: 1
+maze_type:
+  desc: null
+  value: square
+maze_start_random_range:
+  desc: null
+  value: null
+env:
+  desc: null
+  value: ant
+mujoco_render_hw:
+  desc: null
+  value: 100
+max_path_length:
+  desc: null
+  value: 200
+action_range:
+  desc: null
+  value: null
+use_gpu:
+  desc: null
+  value: 1
+seed:
+  desc: null
+  value: 0
+n_parallel:
+  desc: null
+  value: 8
+n_thread:
+  desc: null
+  value: 1
+n_epochs:
+  desc: null
+  value: 200001
+max_optimization_epochs:
+  desc: null
+  value:
+  - 1
+traj_batch_size:
+  desc: null
+  value: 20
+minibatch_size:
+  desc: null
+  value: null
+trans_minibatch_size:
+  desc: null
+  value: 2048
+trans_optimization_epochs:
+  desc: null
+  value: 4
+record_metric_difference:
+  desc: null
+  value: 0
+n_epochs_per_eval:
+  desc: null
+  value: 5000
+n_epochs_per_first_n_eval:
+  desc: null
+  value: null
+custom_eval_steps:
+  desc: null
+  value: null
+n_epochs_per_log:
+  desc: null
+  value: 50
+n_epochs_per_tb:
+  desc: null
+  value: 100
+n_epochs_per_save:
+  desc: null
+  value: 50000
+n_epochs_per_pt_save:
+  desc: null
+  value: 5000
+n_epochs_per_pkl_update:
+  desc: null
+  value: 1000
+num_eval_options:
+  desc: null
+  value: 49
+num_eval_trajectories_per_option:
+  desc: null
+  value: 4
+num_random_trajectories:
+  desc: null
+  value: 200
+eval_record_video:
+  desc: null
+  value: 1
+eval_deterministic_traj:
+  desc: null
+  value: 0
+eval_deterministic_video:
+  desc: null
+  value: 0
+eval_plot_axis:
+  desc: null
+  value:
+  - -50.0
+  - 50.0
+  - -50.0
+  - 50.0
+eval_plot_walls:
+  desc: null
+  value: 1
+video_skip_frames:
+  desc: null
+  value: 1
+dim_option:
+  desc: null
+  value: 2
+common_lr:
+  desc: null
+  value: 0.0001
+lr_sp:
+  desc: null
+  value: null
+lr_op:
+  desc: null
+  value: null
+lr_te:
+  desc: null
+  value: 3.0e-05
+alpha:
+  desc: null
+  value: 0.01
+sac_tau:
+  desc: null
+  value: 0.005
+sac_lr_q:
+  desc: null
+  value: null
+sac_lr_a:
+  desc: null
+  value: -1.0
+sac_discount:
+  desc: null
+  value: 0.99
+sac_scale_reward:
+  desc: null
+  value: 0
+sac_target_coef:
+  desc: null
+  value: 1
+sac_update_target_per_gradient:
+  desc: null
+  value: 0
+sac_update_with_loss_alpha_prior_opt:
+  desc: null
+  value: 0
+sac_replay_buffer:
+  desc: null
+  value: 0
+sac_max_buffer_size:
+  desc: null
+  value: 1000000
+sac_min_buffer_size:
+  desc: null
+  value: 10000
+spectral_normalization:
+  desc: null
+  value: 1
+spectral_coef:
+  desc: null
+  value: 1.0
+model_master_dim:
+  desc: null
+  value: 1024
+model_common_dim:
+  desc: null
+  value: null
+model_master_num_layers:
+  desc: null
+  value: 2
+model_master_nonlinearity:
+  desc: null
+  value: null
+op_hidden_dims:
+  desc: null
+  value: null
+te_lstm_hidden_dim:
+  desc: null
+  value: null
+te_post_lstm_hidden_dims:
+  desc: null
+  value: null
+te_max_optimization_epochs:
+  desc: null
+  value: 2
+te_trans_optimization_epochs:
+  desc: null
+  value: null
+discrete:
+  desc: null
+  value: 0
+lsd_alive_reward:
+  desc: null
+  value: null
+_wandb:
+  desc: null
+  value:
+    python_version: 3.7.12
+    cli_version: 0.15.4
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1751878578.335353
+    t:
+      1:
+      - 1
+      - 3
+      - 5
+      - 53
+      - 55
+      2:
+      - 1
+      - 3
+      - 5
+      - 53
+      - 55
+      3:
+      - 13
+      - 16
+      - 23
+      4: 3.7.12
+      5: 0.15.4
+      8:
+      - 5

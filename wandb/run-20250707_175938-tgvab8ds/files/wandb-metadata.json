@@ -1,0 +1,195 @@
+{
+    "os": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-debian-trixie-sid",
+    "python": "3.7.12",
+    "heartbeatAt": "2025-07-07T08:59:39.295508",
+    "startedAt": "2025-07-07T08:59:38.457379",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--run_group",
+        "EXP",
+        "--env",
+        "ant",
+        "--max_path_length",
+        "200",
+        "--dim_option",
+        "2",
+        "--common_lr",
+        "0.0001",
+        "--seed",
+        "0",
+        "--normalizer_type",
+        "ant_preset",
+        "--use_gpu",
+        "1",
+        "--traj_batch_size",
+        "20",
+        "--n_parallel",
+        "8",
+        "--n_epochs_per_eval",
+        "5000",
+        "--n_thread",
+        "1",
+        "--model_master_dim",
+        "1024",
+        "--record_metric_difference",
+        "0",
+        "--n_epochs_per_tb",
+        "100",
+        "--n_epochs_per_save",
+        "50000",
+        "--n_epochs_per_pt_save",
+        "5000",
+        "--n_epochs_per_pkl_update",
+        "1000",
+        "--eval_record_video",
+        "1",
+        "--n_epochs",
+        "200001",
+        "--spectral_normalization",
+        "1",
+        "--n_epochs_per_log",
+        "50",
+        "--discrete",
+        "0",
+        "--num_random_trajectories",
+        "200",
+        "--sac_discount",
+        "0.99",
+        "--alpha",
+        "0.01",
+        "--sac_lr_a",
+        "-1",
+        "--lr_te",
+        "3e-05",
+        "--sac_scale_reward",
+        "0",
+        "--max_optimization_epochs",
+        "1",
+        "--trans_minibatch_size",
+        "2048",
+        "--trans_optimization_epochs",
+        "4",
+        "--eval_plot_axis",
+        "-50",
+        "50",
+        "-50",
+        "50"
+    ],
+    "state": "running",
+    "program": "tests/main.py",
+    "codePath": "tests/main.py",
+    "git": {
+        "remote": "https://github.com/seohongpark/LSD.git",
+        "commit": "26c3c5f13feded349783fb95b6085b5383dcdf33"
+    },
+    "email": null,
+    "root": "/mnt/c/Users/Jaegyun/Desktop/LSD",
+    "host": "DESKTOP-SR93GQ4",
+    "username": "jaegyun",
+    "executable": "/home/jaegyun/miniconda3/envs/LSD/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 3792.800000000001,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3792.8,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3792.8,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3792.8,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3792.8,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3792.8,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3792.8,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3792.8,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3792.8,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3792.8,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3792.8,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3792.8,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3792.8,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3792.8,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3792.8,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3792.8,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3792.8,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "total": 1006.853931427002,
+        "used": 201.9089241027832
+    },
+    "gpu": "NVIDIA GeForce RTX 3060",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3060",
+            "memory_total": 12884901888
+        }
+    ],
+    "memory": {
+        "total": 30.922046661376953
+    }
+}

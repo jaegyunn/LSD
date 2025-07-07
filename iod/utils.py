@@ -1,6 +1,7 @@
 import copy
 import pathlib
 import time
+import os
 
 import dowel_wrapper
 import akro
@@ -256,6 +257,9 @@ def save_video(runner, label, tensor, fps=15, n_cols=None):
 
     # clip.write_gif(plot_path, verbose=False, logger=None)
     clip.write_videofile(str(plot_path), audio=False, verbose=False, logger=None)
+    if 'WANDB_API_KEY' in os.environ:
+      import wandb
+      wandb.log({label: wandb.Video(str(plot_path))}, step=runner.step_itr)
 
 
 def save_trajectories(runner, label, tensor, skip_frame=3, n_cols=None):
